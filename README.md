@@ -1,5 +1,7 @@
 ## Developing
 
+<!-- TODO: add more information for developers and create CONTIBUTING.md file -->
+
 ### Setup local *NIX environment
 
 Once you have git and node setup on your machine, you need to install the Ionic CLI.
