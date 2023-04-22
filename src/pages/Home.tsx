@@ -1,13 +1,13 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonHeader, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle>ToDo</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -16,8 +16,10 @@ const Home: React.FC = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
-      </IonContent>
+        <div className="container">
+          <Link to="/login">Login</Link>
+        </div>
+        </IonContent>
     </IonPage>
   );
 };
