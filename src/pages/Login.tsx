@@ -5,15 +5,10 @@ import {
   IonButton,
   IonContent,
   IonHeader,
-  IonInput,
-  IonItem,
   IonLabel,
-  IonList,
   IonPage,
   IonTitle,
   IonToolbar,
-  useIonToast,
-  useIonLoading,
 } from '@ionic/react';
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
@@ -32,15 +27,17 @@ export default function Login() {
 
       {/* FIXME: redirect link for development locally and on codespaces */}
       <IonContent>
-        {!user ? (
-          <Auth
-          supabaseClient={supabaseClient}
-          appearance={{ theme: ThemeSupa }}
-          redirectTo='http://localhost:3000/home'
-          />
-        ): (
-          <IonLabel>Logged in</IonLabel>
-        )}
+        <div className="container">
+          {!user ? (
+            <Auth
+            supabaseClient={supabaseClient}
+            appearance={{ theme: ThemeSupa }}
+            redirectTo='http://localhost:3000/home'
+            />
+          ): (
+            <IonLabel>Logged in</IonLabel>
+          )}
+        </div>
       </IonContent>
     </IonPage>
   );
